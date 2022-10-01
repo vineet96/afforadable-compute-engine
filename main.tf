@@ -1,5 +1,5 @@
 resource "google_compute_instance" "vm_instance" {
-  name         = var.ce_name
+  name         = "${var.ce_name}-${"gcp-compute"}"
   machine_type = var.machine_type
   zone = var.zone
   tags         = ["ssh","http-server","https-server"]
